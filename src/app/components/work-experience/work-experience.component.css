@@ -1,0 +1,146 @@
+/* Card container styles */
+.card, .card_list {
+  background: #4a1d95;
+  border-radius: 10px;
+  color: #f4f2ff;
+  padding: 20px;
+  margin: auto;
+  width: 540px;
+}
+
+/* Card delete styles */
+.card_delete {
+  margin: auto;
+  margin-top: 7.5%;
+  width: 540px;
+  min-height: 695px;
+  padding: 20px;
+  background: #4a1d95;
+  border-radius: 10px;
+}
+
+/* Card header styles */
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.card_header h3 {
+  margin: 0;
+}
+
+/* Card body styles */
+.card_body {
+  margin: 0;
+  padding: 0;
+}
+
+.card_body h3 {
+  margin: 15px 0 0 0;
+}
+
+/* Achievements list styles */
+.achievements_list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.achievements_list li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Card company styles */
+.card_company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company {
+  text-align: end;
+  justify-content: end;
+}
+
+/* Flexbox layout styles for body */
+.body {
+  display: flex;
+  gap: 50px;
+}
+
+/* Dates layout styles */
+.dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dates div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+/* Heading styles */
+h1 {
+  color: #f4f2ff;
+  text-align: center;
+  font-size: 32px;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles */
+label {
+  margin: 10px 0 5px 0;
+  color: #f4f2ff;
+}
+
+/* Input styles */
+input {
+  border: 1px solid #f4f2ff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+input:focus {
+  outline: #2d1065 solid 2px;
+}
+
+/* Button styles */
+button {
+  background-color: #7a3aed;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #6b28d9;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+button:disabled {
+  background-color: #2d1065;
+  cursor: default;
+  color: #6b28d9;
+}

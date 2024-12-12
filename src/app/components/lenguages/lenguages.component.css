@@ -1,0 +1,177 @@
+/* Estilo para el card principal */
+.card {
+  background: #4a1d95;
+  border-radius: 15px;
+  color: #f4f2ff;
+  padding: 30px;
+  margin: auto;
+  margin-top: 7.5%;
+  width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el card */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para el card de eliminar */
+.card_delete {
+  padding: 20px;
+  margin: auto;
+  margin-top: 7.5%;
+  width: 540px;
+  height: 695px;
+  background-color: #4a1d95;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el card de lista */
+.card_list {
+  background: #4a1d95;
+  padding: 20px;
+  border-radius: 15px;
+  color: #f4f2ff;
+  width: 540px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del encabezado del card */
+.card_header {
+  justify-content: space-between;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.card_header h3 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #f4f2ff;
+}
+
+/* Estilo para el cuerpo del card */
+.card_body {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.card_body h3 {
+  margin: 15px 0 20px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  color: #f4f2ff;
+}
+
+/* Lista de logros */
+.achievements_list {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.achievements_list li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #f4f2ff;
+}
+
+/* Estilo para la sección de la empresa */
+.card_company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company {
+  text-align: end;
+  justify-content: end;
+}
+
+/* Estilo de la sección de fechas */
+.dates {
+  justify-content: space-between;
+  display: flex;
+}
+
+.dates div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+/* Estilo general para el título */
+h1 {
+  color: #f4f2ff;
+  text-align: center;
+  font-size: 36px;
+  margin: 0 0 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo para el formulario */
+form {
+  flex-direction: column;
+  display: flex;
+}
+
+/* Estilo para las etiquetas de formulario */
+label {
+  margin: 10px 0 5px;
+  color: #f4f2ff;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para los campos de entrada */
+input {
+  border: 2px solid #f4f2ff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 15px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo para el foco de los inputs */
+input:focus {
+  border-color: #2d1065;
+  outline: none;
+}
+
+/* Estilo para el botón */
+button {
+  background-color: #7a3aed;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover del botón */
+button:hover {
+  background-color: #6b28d9;
+  transform: translateY(-3px);
+}
+
+/* Efecto activo del botón */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Estilo para el botón deshabilitado */
+button:disabled {
+  background-color: #2d1065;
+  cursor: default;
+  color: #6b28d9;
+}

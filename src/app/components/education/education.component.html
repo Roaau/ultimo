@@ -1,0 +1,72 @@
+<section class="body">
+  <section class="card">
+    <h1>Create Education</h1>
+    <form #educationForm="ngForm" (ngSubmit)="onSubmit(educationForm)">
+      <label for="idEducation">ID</label>
+      <input
+        type="number"
+        id="idEducation"
+        name="idEducation"
+        [(ngModel)]="idEducation"
+        required
+      />
+
+      <label for="degree">Degree</label>
+      <input
+        type="text"
+        id="degree"
+        name="degree"
+        [(ngModel)]="degree"
+        required
+      />
+
+      <label for="university">University</label>
+      <input
+        type="text"
+        id="university"
+        name="university"
+        [(ngModel)]="university"
+        required
+      />
+
+      <div class="dates">
+        <div>
+          <label for="startDate">Start Date</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            [(ngModel)]="startDate"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="endDate">End Date</label>
+          <input
+            type="date"
+            id="endDate"
+            name="endDate"
+            [(ngModel)]="endDate"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!educationForm.valid">Submit</button>
+    </form>
+  </section>
+
+  <section class="card_list">
+    <h2>Education List</h2>
+    <div class="card_item" *ngFor="let degree of degrees">
+      <div class="card_header">
+        <h3>
+          {{ degree.id }} - {{ degree.degree }} at {{ degree.university }}
+        </h3>
+        <p>{{ degree.startDate | date : 'yyyy/MM/dd' }} - {{ degree.endDate | date : 'yyyy/MM/dd' }}</p>
+      </div>
+      <button (click)="deleteEducation(degree.id)">Delete</button>
+    </div>
+  </section>
+</section>

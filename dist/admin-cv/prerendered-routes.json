@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/achievements",
+    "/education",
+    "/header",
+    "/interests",
+    "/lenguages",
+    "/login",
+    "/skills",
+    "/work-experience"
+  ]
+}

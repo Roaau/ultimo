@@ -1,0 +1,94 @@
+<section class="body">
+  <section class="card">
+    <h1>Create or Update Experience</h1>
+    <form #workForm="ngForm" (ngSubmit)="onSubmit(workForm)">
+      <label for="idWorkExperience">ID</label>
+      <input
+        type="number"
+        id="idWorkExperience"
+        name="idWorkExperience"
+        [(ngModel)]="idWorkExperience"
+        required
+      />
+
+      <label for="company">Company</label>
+      <input
+        type="text"
+        id="company"
+        name="company"
+        [(ngModel)]="company"
+        required
+      />
+
+      <label for="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        name="location"
+        [(ngModel)]="location"
+        required
+      />
+
+      <div class="dates">
+        <div>
+          <label for="startDate">Start Date</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            [(ngModel)]="startDate"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="endDate">End Date</label>
+          <input
+            type="date"
+            id="endDate"
+            name="endDate"
+            [(ngModel)]="endDate"
+            required
+          />
+        </div>
+      </div>
+
+      <label for="position">Position</label>
+      <input
+        type="text"
+        id="position"
+        name="position"
+        [(ngModel)]="position"
+        required
+      />
+
+      <label for="achievements">Achievements</label>
+      <input
+        type="text"
+        id="achievements"
+        name="achievements"
+        [(ngModel)]="achievements"
+        required
+      />
+      <button type="submit" [disabled]="!isFormValid()">Submit</button>
+    </form>
+  </section>
+  <section class="card_delete">
+    <div class="card_list" *ngFor="let workExperience of workExperiences">
+      <div class="card_header">
+            <h3>{{ workExperience.id }} - {{ workExperience.position }}</h3>
+            <h3>{{ workExperience.startDate | date:'yyy/dd/MM' }} - {{ workExperience.endDate | date:'yyy/dd/MM' }}</h3>
+      </div>
+      <div class="card_body">
+        <div class="card_company">
+            <h3>{{ workExperience.location }}</h3>
+            <h3>{{ workExperience.company }}</h3>
+        </div>
+        <h3>{{ workExperience.achievements }}</h3>
+      </div>
+      <button (click)="deleteWorkExperience(workExperience.id)">
+        Delete
+      </button>
+    </div>
+  </section>
+</section>

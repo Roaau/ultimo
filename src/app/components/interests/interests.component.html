@@ -1,0 +1,36 @@
+<section class="body">
+  <section class="card">
+    <h1>Create Interest</h1>
+    <form #interestForm="ngForm" (ngSubmit)="onSubmit(interestForm)">
+      <label for="idInterest">ID</label>
+      <input
+        type="number"
+        id="idInterest"
+        name="idInterest"
+        [(ngModel)]="idInterest"
+        required
+      />
+
+      <label for="name">Interest Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="name"
+        required
+      />
+
+      <button type="submit" [disabled]="!interestForm.valid">Submit</button>
+    </form>
+  </section>
+
+  <section class="card_list">
+    <h2>Interests List</h2>
+    <div class="card_item" *ngFor="let interest of interests">
+      <div class="card_header">
+        <h3>{{ interest.id }} - {{ interest.name }}</h3>
+      </div>
+      <button (click)="deleteInterest(interest.id)">Delete</button>
+    </div>
+  </section>
+</section>

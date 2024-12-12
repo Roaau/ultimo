@@ -1,0 +1,10 @@
+<section class="card">
+  <h1>Login</h1>
+  <div id="form">
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username"/>
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="password"/>
+    <button (click)="login()">Login</button>
+  </div>
+</section>

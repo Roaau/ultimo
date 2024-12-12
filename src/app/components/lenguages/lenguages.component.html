@@ -1,0 +1,47 @@
+<section class="body">
+  <section class="card">
+    <h1>Create Language</h1>
+    <form #languageForm="ngForm" (ngSubmit)="onSubmit(languageForm)">
+      <label for="idLanguages">ID</label>
+      <input
+        type="number"
+        id="idLanguages"
+        name="idLanguages"
+        [(ngModel)]="idLanguages"
+        required
+      />
+
+      <label for="language">Language</label>
+      <input
+        type="text"
+        id="language"
+        name="language"
+        [(ngModel)]="language"
+        required
+      />
+
+      <label for="level">Level</label>
+      <input
+        type="text"
+        id="level"
+        name="level"
+        [(ngModel)]="level"
+        required
+      />
+
+      <button type="submit" [disabled]="!languageForm.valid">Submit</button>
+    </form>
+  </section>
+
+  <section class="card_list">
+    <h2>Languages List</h2>
+    <div class="card_item" *ngFor="let language of languages">
+      <div class="card_header">
+        <h3>
+          {{ language.id }} - {{ language.language }} ({{ language.level }})
+        </h3>
+      </div>
+      <button (click)="deleteLanguage(language.id)">Delete</button>
+    </div>
+  </section>
+</section>

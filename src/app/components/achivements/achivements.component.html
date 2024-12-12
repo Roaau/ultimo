@@ -1,0 +1,60 @@
+<section class="body">
+    <section class="card">
+      <h1>Create Certificate</h1>
+      <form #certificateForm="ngForm" (ngSubmit)="onSubmit(certificateForm)">
+        <label for="idCertificates">ID</label>
+        <input
+          type="number"
+          id="idCertificates"
+          name="idCertificates"
+          [(ngModel)]="idCertificates"
+          required
+          placeholder="Enter Certificate ID"
+        />
+  
+        <label for="institution">Institution</label>
+        <input
+          type="text"
+          id="institution"
+          name="institution"
+          [(ngModel)]="institution"
+          required
+          placeholder="Enter Institution"
+        />
+  
+        <label for="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="title"
+          required
+          placeholder="Enter Certificate Title"
+        />
+  
+        <label for="year">Year</label>
+        <input
+          type="number"
+          id="year"
+          name="year"
+          [(ngModel)]="year"
+          required
+          placeholder="Enter Year"
+        />
+  
+        <button type="submit" [disabled]="!certificateForm.valid">Submit</button>
+      </form>
+    </section>
+  
+    <section class="card_list">
+      <h2>Certificates List</h2>
+      <div class="card_item" *ngFor="let certificate of certificates">
+        <div class="card_header">
+          <h3>{{ certificate.id }} - {{ certificate.title }}</h3>
+          <p>{{ certificate.institution }} ({{ certificate.year }})</p>
+        </div>
+        <button (click)="deleteCertificate(certificate.id)">Delete</button>
+      </div>
+    </section>
+  </section>
+  

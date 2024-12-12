@@ -1,0 +1,74 @@
+/* Estilo general */
+.card {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 40px auto;
+  padding: 30px;
+  width: 380px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Título */
+h1 {
+  color: #333;
+  font-size: 36px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  color: #444;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Inputs */
+input {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botón */
+button {
+  background-color: #007bff;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
